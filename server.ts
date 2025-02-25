@@ -20,6 +20,8 @@ const io = new Server(server, {
   },
 });
 
+app.set("io", io);
+
 // User sessions tracking (socket id -> user id)
 let userSessions: { [userId: string]: string[] } = {};
 
